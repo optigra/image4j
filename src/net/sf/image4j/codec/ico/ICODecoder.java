@@ -148,7 +148,7 @@ public class ICODecoder {
             int skipped = in.skipBytes(skip);
             int s = skip;
             while (skipped < s) {
-              if (skipped < 0) {
+              if (skipped <= 0) {
                 throw new IOException("Failed to read [skip]");
               }
               s = skip - skipped;
