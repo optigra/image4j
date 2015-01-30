@@ -47,7 +47,6 @@ public class BMPDecoderTest {
 		f.pack();
 		f.setVisible(true);
 		
-		System.out.println("Hello World!");
 		
 	}
 
