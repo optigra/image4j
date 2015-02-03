@@ -19,9 +19,11 @@ public class BMPDecoderTest {
 	
 	InputStream is;
 	
+	String filename = "/monochrome.bmp";
+	
 	@Before
 	public void setUp() throws Exception {
-		is = getClass().getResourceAsStream("/BLU.BMP");
+		is = getClass().getResourceAsStream(filename);
 	}
 
 	@After
@@ -34,7 +36,7 @@ public class BMPDecoderTest {
 	@Test
 	public void test() throws Exception {
 		assertNotNull("Test file missing", 
-	               getClass().getResource("/BLU.BMP"));
+	               getClass().getResource(filename));
 		BufferedImage img = BMPDecoder.read(is);
 		
 		javax.swing.JFrame f = new javax.swing.JFrame("test");
