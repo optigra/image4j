@@ -12,14 +12,14 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<jdk.version>1.7</jdk.version>
+		<jdk.version>11</jdk.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.12</version>
+			<version>4.13</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -40,7 +40,7 @@
 
 		<plugin>
 			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.0</version>
+			<version>3.8.1</version>
 			<configuration>
 				<source>${jdk.version}</source>
 				<target>${jdk.version}</target>
@@ -50,7 +50,7 @@
 
 		<plugin>
 			<artifactId>maven-source-plugin</artifactId>
-			<version>2.2.1</version>
+			<version>3.2.0</version>
 			<executions>
 				<execution>
 					<id>attach-sources</id>
@@ -63,7 +63,7 @@
 
 		<plugin>
 			<artifactId>maven-release-plugin</artifactId>
-			<version>2.3.2</version>
+			<version>3.0.0-M1</version>
 			<configuration>
 				<preparationGoals>clean verify javadoc:jar source:jar</preparationGoals>
 				<completionGoals>deploy</completionGoals>
@@ -72,7 +72,7 @@
 
 		<plugin>
 			<artifactId>maven-jar-plugin</artifactId>
-			<version>2.4</version>
+			<version>3.2.0</version>
 			<configuration>
 				<archive>
 					<manifest>
@@ -83,17 +83,6 @@
 						<Extension-Name>${project.artifactId}</Extension-Name>
 					</manifestEntries>
 				</archive>
-			</configuration>
-		</plugin>
-
-		<plugin>
-			<artifactId>maven-eclipse-plugin</artifactId>
-			<version>2.9</version>
-			<configuration>
-				<addGroupIdToProjectName>true</addGroupIdToProjectName>
-				<downloadSources>true</downloadSources>
-				<downloadJavadocs>true</downloadJavadocs>
-				<ajdtVersion>none</ajdtVersion>
 			</configuration>
 		</plugin>
 
